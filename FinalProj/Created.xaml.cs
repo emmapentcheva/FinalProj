@@ -26,6 +26,33 @@ namespace FinalProj
             InitializeComponent();
         }
 
+        //private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pentc\Desktop\FinalProj\FinalProj\SpitifyDatabases.mdf;Integrated Security=True");
+        //    try
+        //    {
+        //        sqlCon.Open();
+        //        string query = "select Name, Artist, Album from MyPlay where Playlist = '"+ playlistnamer+"'";
+        //        SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
+        //        sqlCmd.ExecuteNonQuery();
+        //        SqlDataAdapter word = new SqlDataAdapter(sqlCmd);
+        //        DataTable dt = new DataTable();
+        //        word.Fill(dt);
+        //        DataGridmeow.ItemsSource = dt.DefaultView;
+        //        word.Update(dt);
+        //        MessageBox.Show("The Data is Complete");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
+        //    finally
+        //    {
+        //        sqlCon.Close();
+        //    }
+        //}
+
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             AddSong a = new AddSong();

@@ -27,7 +27,16 @@
         <Image Source="C:\Users\pentc\Desktop\Spitify\Screenshot 2023-04-17 at 16.01.54.png" Margin="21,5,21,5"/>
         <TextBox Grid.Row="1" Foreground="#FFFFFF" Background="Transparent" x:Name="playlistnamer" FontSize="18" FontFamily="Century Gothic" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Width="390" Height="39"></TextBox>
         <Button Content="" Template="{StaticResource NoMouseOverButtonTemplate}" x:Name="Home" Background="Transparent" BorderBrush="Transparent" />
-        <DataGrid x:Name ="DataGridmeow" HorizontalAlignment="Center" Height="483" VerticalAlignment="Top" Width="370"  Margin="0,59,0,0" Grid.RowSpan="10" Grid.Row="2" Background="#FF242424" Foreground="White" RowBackground="#FF242424"/>
+        <DataGrid x:Name ="DataGridmeow" HorizontalAlignment="Center" Height="483" VerticalAlignment="Top" Width="370"  Margin="0,59,0,0" Grid.RowSpan="10" Grid.Row="2" Background="#FF242424" Foreground="White" RowBackground="#FF242424" AlternatingRowBackground="#FF242424">
+            <DataGrid.Resources>
+                <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#FF69AB" />
+                </Style>
+                <Style BasedOn="{StaticResource {x:Type DataGridRowHeader}}" TargetType="{x:Type DataGridRowHeader}">
+                    <Setter Property="Background" Value="#242424" />
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
 
         <Button Content="Add Song" FontFamily="Century Gothic" FontSize="24" Margin="127,10,127,10" Grid.Row="12" Background="#FF69AB" Template="{StaticResource NoMouseOverButtonTemplate}" Click="Button_Click">
             <Button.Resources>
