@@ -37,7 +37,24 @@
                 </Style>
             </DataGrid.Resources>
         </DataGrid>
-        <Button Content="Playlists" FontFamily="Century Gothic" FontSize="24" Margin="127,10,127,10" Grid.Row="12" Background="#FF69AB" Template="{StaticResource NoMouseOverButtonTemplate}" Click="Button_Click">
+        <Button Content="Add Song" FontFamily="Century Gothic" FontSize="24" Margin="28,10,226,10" Grid.Row="12" Background="#FF69AB" Template="{StaticResource NoMouseOverButtonTemplate}" Click="Button_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="16"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="Delete Song" FontFamily="Century Gothic" FontSize="24" Margin="206,10,22,10" Grid.Row="12" Background="#FF69AB" Click="Button_Click_2" >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="16"/>
+                </Style>
+            </Button.Resources>
+            <Button.Template>
+                <StaticResource ResourceKey="NoMouseOverButtonTemplate"/>
+            </Button.Template>
+        </Button>
+        <Button Content="Playlists" FontFamily="Century Gothic" FontSize="24" Margin="127,10,127,10" Grid.Row="13" Background="#FF69AB" Template="{StaticResource NoMouseOverButtonTemplate}" Click="Button_Click_3">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="16"></Setter>

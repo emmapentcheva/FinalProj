@@ -24,7 +24,23 @@ namespace FinalProj
             InitializeComponent();
         }
 
+
+
         private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            rar d = new rar();
+            d.Show();
+            this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            rar d = new rar();
+            d.Show();
+            this.Close();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             Playlist p = new Playlist();
             p.Show();

@@ -127,11 +127,14 @@ namespace FinalProj
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             TodaysHits th = new TodaysHits();
-            SqlConnection sqlCon2 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pentc\Desktop\FinalProj\FinalProj\SpitifyDatabases.mdf;Integrated Security=True");
+            SqlConnection sqlCon2 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pentc\Desktop\FinalProj_\FinalProj\SpitifyDatabases.mdf;Integrated Security=True");
+            th.Show();
+            this.Close();
+
             try
             {
                 sqlCon2.Open();
-                string query = "select Name, Artist, Album from TodayHits";
+                string query = "select Name, Artist, Album from TodaysHits";
                 SqlCommand sqlCmd = new SqlCommand(query, sqlCon2);
                 sqlCmd.ExecuteNonQuery();
                 SqlDataAdapter word = new SqlDataAdapter(sqlCmd);
@@ -154,7 +157,9 @@ namespace FinalProj
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             Alternative av = new Alternative();
-            SqlConnection sqlCon3 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pentc\Desktop\FinalProj\FinalProj\SpitifyDatabases.mdf;Integrated Security=True");
+            av.Show();
+            this.Close();
+            SqlConnection sqlCon3 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pentc\Desktop\FinalProj_\FinalProj\SpitifyDatabases.mdf;Integrated Security=True");
             try
             {
                 sqlCon3.Open();
