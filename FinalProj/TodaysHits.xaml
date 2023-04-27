@@ -1,11 +1,11 @@
-﻿<Window x:Class="FinalProj.Created"
+﻿<Window x:Class="FinalProj.TodaysHits"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FinalProj"
         mc:Ignorable="d"
-        Title="Created" Height="844" Width="390" Background="#242424">
+        Title="TodaysHits" Height="844" Width="390" Background="#242424">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
@@ -25,9 +25,9 @@
         </Grid.RowDefinitions>
 
         <Image Source="C:\Users\pentc\Desktop\Spitify\Screenshot 2023-04-17 at 16.01.54.png" Margin="21,5,21,5"/>
-        <TextBox Grid.Row="1" Foreground="#FFFFFF" Background="Transparent" x:Name="playlistnamer" FontSize="18" FontFamily="Century Gothic" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Width="390" Height="39"></TextBox>
+        <Label Grid.Row="1" Foreground="#FFFFFF" Background="Transparent" x:Name="todayhit" Content="Todays Hits" FontSize="18" FontFamily="Century Gothic" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Width="390" Height="39"></Label>
         <Button Content="" Template="{StaticResource NoMouseOverButtonTemplate}" x:Name="Home" Background="Transparent" BorderBrush="Transparent" />
-        <DataGrid x:Name ="DataGridmeow" HorizontalAlignment="Center" Height="483" VerticalAlignment="Top" Width="370"  Margin="0,59,0,0" Grid.RowSpan="10" Grid.Row="2" Background="#FF242424" Foreground="White" RowBackground="#FF242424" AlternatingRowBackground="#FF242424">
+        <DataGrid x:Name ="DataGridmeowser" HorizontalAlignment="Center" Height="483" VerticalAlignment="Top" Width="370"  Margin="0,59,0,0" Grid.RowSpan="10" Grid.Row="2" Background="#FF242424" Foreground="White" RowBackground="#FF242424" AlternatingRowBackground="#FF242424">
             <DataGrid.Resources>
                 <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
                     <Setter Property="Background" Value="#FF69AB" />
@@ -37,25 +37,7 @@
                 </Style>
             </DataGrid.Resources>
         </DataGrid>
-
-        <Button Content="Add Song" FontFamily="Century Gothic" FontSize="24" Margin="28,10,226,10" Grid.Row="12" Background="#FF69AB" Template="{StaticResource NoMouseOverButtonTemplate}" Click="Button_Click_1" >
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="16"></Setter>
-                </Style>
-            </Button.Resources>
-        </Button>
-        <Button Content="Delete Song" FontFamily="Century Gothic" FontSize="24" Margin="206,10,22,10" Grid.Row="12" Background="#FF69AB" Click="Button_Click_2" >
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="16"/>
-                </Style>
-            </Button.Resources>
-            <Button.Template>
-                <StaticResource ResourceKey="NoMouseOverButtonTemplate"/>
-            </Button.Template>
-        </Button>
-        <Button Content="Playlists" FontFamily="Century Gothic" FontSize="24" Margin="127,10,127,10" Grid.Row="13" Background="#FF69AB" Template="{StaticResource NoMouseOverButtonTemplate}" Click="Button_Click_3">
+        <Button Content="Playlists" FontFamily="Century Gothic" FontSize="24" Margin="127,10,127,10" Grid.Row="12" Background="#FF69AB" Template="{StaticResource NoMouseOverButtonTemplate}" Click="Button_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="16"></Setter>

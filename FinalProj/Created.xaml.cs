@@ -71,5 +71,12 @@ namespace FinalProj
             d.Show();
             this.Close();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            Playlist p = new Playlist();
+            p.Show();
+            this.Show();
+        }
     }
 }

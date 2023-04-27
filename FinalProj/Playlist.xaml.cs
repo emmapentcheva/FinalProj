@@ -60,6 +60,8 @@ namespace FinalProj
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Created mv = new Created();
+            
+            
 
             SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pentc\Desktop\FinalProj\FinalProj\SpitifyDatabases.mdf;Integrated Security=True");
 
@@ -115,6 +117,64 @@ namespace FinalProj
             finally
             {
                 sqlCon.Close();
+            }
+
+            
+
+            
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            TodaysHits th = new TodaysHits();
+            SqlConnection sqlCon2 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pentc\Desktop\FinalProj\FinalProj\SpitifyDatabases.mdf;Integrated Security=True");
+            try
+            {
+                sqlCon2.Open();
+                string query = "select Name, Artist, Album from TodayHits";
+                SqlCommand sqlCmd = new SqlCommand(query, sqlCon2);
+                sqlCmd.ExecuteNonQuery();
+                SqlDataAdapter word = new SqlDataAdapter(sqlCmd);
+                DataTable dt = new DataTable();
+                word.Fill(dt);
+                th.DataGridmeowser.ItemsSource = dt.DefaultView;
+                word.Update(dt);
+                MessageBox.Show("The Data is Complete");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                sqlCon2.Close();
+            }
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Alternative av = new Alternative();
+            SqlConnection sqlCon3 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pentc\Desktop\FinalProj\FinalProj\SpitifyDatabases.mdf;Integrated Security=True");
+            try
+            {
+                sqlCon3.Open();
+                string query = "select Name, Artist, Album from Alternative";
+                SqlCommand sqlCmd = new SqlCommand(query, sqlCon3);
+                sqlCmd.ExecuteNonQuery();
+                SqlDataAdapter word = new SqlDataAdapter(sqlCmd);
+                DataTable dt = new DataTable();
+                word.Fill(dt);
+                av.DataGridwoof.ItemsSource = dt.DefaultView;
+                word.Update(dt);
+                MessageBox.Show("The Data is Complete");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                sqlCon3.Close();
             }
         }
     }
