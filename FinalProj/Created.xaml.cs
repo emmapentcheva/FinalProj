@@ -28,7 +28,7 @@ namespace FinalProj
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pentc\Desktop\Spitify\Spitify\Databses.mdf;Integrated Security=True");
+            SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pentc\Desktop\FinalProj\FinalProj\SpitifyDatabases.mdf;Integrated Security=True");
             try
             {
                 sqlCon.Open();

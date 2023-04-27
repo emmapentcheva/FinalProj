@@ -27,7 +27,7 @@ namespace FinalProj
 
         public void fillcombobox()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pentc\Desktop\Spitify\Spitify\Databses.mdf;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pentc\Desktop\FinalProj\FinalProj\SpitifyDatabases.mdf;Integrated Security=True");
             string query = "select * from NewPlaylist";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader myreader;
