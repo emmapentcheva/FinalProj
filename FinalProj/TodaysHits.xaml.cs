@@ -28,7 +28,7 @@ namespace FinalProj
         {
             Playlist p = new Playlist();
             p.Show();
-            this.Show();
+            this.Close();
         }
     }
 }

@@ -46,7 +46,10 @@
             </Button.Resources>
         </Button>
         <ComboBox x:Name="comboBox1" Margin="46,15,46,15" Grid.Row="10"/>
+        <Image Source="C:\Users\pentc\Desktop\IMG_4554.jpg" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" Margin="94,9.667,0,0" Grid.Row="2" Height="177" Grid.RowSpan="4" ></Image>
         <Button Content="" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" Margin="94,9.667,0,0" Grid.Row="2" Height="177" Grid.RowSpan="4" Click="Button_Click_1"/>
+
+        <Image Source="C:\Users\pentc\Desktop\IMG_4555.jpg" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" Margin="90,10,0,0" Grid.Row="6" Height="177" Grid.RowSpan="4" ></Image>
         <Button Content="" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" Margin="90,10,0,0" Grid.Row="6" Height="177" Grid.RowSpan="4" Click="Button_Click_2" />
     </Grid>
 </Window>
