@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -91,6 +92,29 @@ namespace FinalProj
 
                 sqlCon.Close();
 
+            }
+
+            SqlConnection sqlCon1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pentc\Desktop\FinalProj\FinalProj\SpitifyDatabases.mdf;Integrated Security=True");
+            try
+            {
+                sqlCon.Open();
+                string query = "select Name, Artist, Album from MyPlay where Playlist = '" + mv.playlistnamer.Text + "'";
+                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
+                sqlCmd.ExecuteNonQuery();
+                SqlDataAdapter word = new SqlDataAdapter(sqlCmd);
+                DataTable dt = new DataTable();
+                word.Fill(dt);
+                mv.DataGridmeow.ItemsSource = dt.DefaultView;
+                word.Update(dt);
+                MessageBox.Show("The Data is Complete");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                sqlCon.Close();
             }
         }
     }
