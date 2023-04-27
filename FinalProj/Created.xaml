@@ -25,9 +25,9 @@
         </Grid.RowDefinitions>
 
         <Image Source="C:\Users\pentc\Desktop\Spitify\Screenshot 2023-04-17 at 16.01.54.png" Margin="21,5,21,5"/>
-        <TextBox Grid.Row="1" Foreground="#FFFFFF" Background="Transparent" x:Name="playlistnamer" FontSize="20" FontFamily="Century Gothic" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Width="136" Height="39"></TextBox>
+        <TextBox Grid.Row="1" Foreground="#FFFFFF" Background="Transparent" x:Name="playlistnamer" FontSize="18" FontFamily="Century Gothic" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Width="390" Height="39"></TextBox>
         <Button Content="" Template="{StaticResource NoMouseOverButtonTemplate}" x:Name="Home" Background="Transparent" BorderBrush="Transparent" />
-        <DataGrid x:Name ="DataGrid" HorizontalAlignment="Center" Height="523" VerticalAlignment="Top" Width="346" SelectionChanged="DataGrid_SelectionChanged" Grid.RowSpan="10" Grid.Row="2" Margin="0,59,0,0"/>
+        <DataGrid x:Name ="DataGrid" HorizontalAlignment="Center" Height="60" VerticalAlignment="Center" Width="370" SelectionChanged="DataGrid_SelectionChanged" Grid.Row="3"/>
 
         <Button Content="Add Song" FontFamily="Century Gothic" FontSize="24" Margin="127,10,127,10" Grid.Row="12" Background="#FF69AB" Template="{StaticResource NoMouseOverButtonTemplate}" Click="Button_Click">
             <Button.Resources>
